@@ -1,6 +1,6 @@
 # Adafruit ADXL375 Accelerometer Driver ![Build Status](https://github.com/adafruit/Adafruit_ADXL375/workflows/Arduino%20Library%20CI/badge.svg)
 
-This driver is for the Adafruit ADXL375 Breakout (http://www.adafruit.com/products/), and is based on Adafruit's Unified Sensor Library (Adafruit_Sensor).
+This driver is for the Adafruit ADXL375 Breakout (http://www.adafruit.com/products/5374), and is based on Adafruit's Unified Sensor Library (Adafruit_Sensor).
 
 ## About the ADXL375 ##
 
