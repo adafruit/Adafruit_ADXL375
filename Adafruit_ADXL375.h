@@ -58,7 +58,6 @@ public:
   void getSensor(sensor_t *);
 
 private:
-
 };
 
 #endif

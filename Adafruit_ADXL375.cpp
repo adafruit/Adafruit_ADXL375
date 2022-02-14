@@ -29,10 +29,8 @@
  *                    tag sensorEvents you create.
  */
 /**************************************************************************/
-Adafruit_ADXL375::Adafruit_ADXL375(int32_t sensorID) : 
-  Adafruit_ADXL343(sensorID)
-{
-}
+Adafruit_ADXL375::Adafruit_ADXL375(int32_t sensorID)
+    : Adafruit_ADXL343(sensorID) {}
 
 /**************************************************************************/
 /*!
@@ -43,9 +41,8 @@ Adafruit_ADXL375::Adafruit_ADXL375(int32_t sensorID) :
  *   @param wireBus   TwoWire instance to use for I2C communication.
  */
 /**************************************************************************/
-Adafruit_ADXL375::Adafruit_ADXL375(int32_t sensorID, TwoWire *wireBus) :
-  Adafruit_ADXL343(sensorID, wireBus) {
-}
+Adafruit_ADXL375::Adafruit_ADXL375(int32_t sensorID, TwoWire *wireBus)
+    : Adafruit_ADXL343(sensorID, wireBus) {}
 
 /**************************************************************************/
 /*!
@@ -60,10 +57,8 @@ Adafruit_ADXL375::Adafruit_ADXL375(int32_t sensorID, TwoWire *wireBus) :
 */
 /**************************************************************************/
 Adafruit_ADXL375::Adafruit_ADXL375(uint8_t clock, uint8_t miso, uint8_t mosi,
-                                   uint8_t cs, int32_t sensorID) : 
-  Adafruit_ADXL343(clock, miso, mosi, cs, sensorID)
-{
-}
+                                   uint8_t cs, int32_t sensorID)
+    : Adafruit_ADXL343(clock, miso, mosi, cs, sensorID) {}
 
 /**************************************************************************/
 /*!
@@ -132,9 +127,7 @@ bool Adafruit_ADXL375::begin(uint8_t i2caddr) {
     @param range Unused range argument
 */
 /**************************************************************************/
-void Adafruit_ADXL375::setRange(adxl34x_range_t range) {
-  return;
-}
+void Adafruit_ADXL375::setRange(adxl34x_range_t range) { return; }
 
 /**************************************************************************/
 /*!
@@ -143,11 +136,7 @@ void Adafruit_ADXL375::setRange(adxl34x_range_t range) {
     @return Always returns 0
 */
 /**************************************************************************/
-adxl34x_range_t Adafruit_ADXL375::getRange(void) {
-  return (adxl34x_range_t)0;
-}
-
-
+adxl34x_range_t Adafruit_ADXL375::getRange(void) { return (adxl34x_range_t)0; }
 
 /**************************************************************************/
 /*!
