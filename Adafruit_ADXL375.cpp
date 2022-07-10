@@ -117,6 +117,10 @@ bool Adafruit_ADXL375::begin(uint8_t i2caddr) {
   // Enable measurements
   writeRegister(ADXL3XX_REG_POWER_CTL, 0x08);
 
+  // Force full range (fixes issue with DATA_FORMAT register's reset value)
+  // Per datasheet, needs to be D4=0, D3=D1=D0=1
+  writeRegister(ADXL3XX_REG_DATA_FORMAT, 0b00001011);
+
   return true;
 }
 
