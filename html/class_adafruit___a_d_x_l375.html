@@ -84,8 +84,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5cdd726a4633482fd40cdbc35c46835d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___a_d_x_l375.html#a5cdd726a4633482fd40cdbc35c46835d">Adafruit_ADXL375</a> (int32_t sensorID, TwoWire *wireBus)</td></tr>
 <tr class="memdesc:a5cdd726a4633482fd40cdbc35c46835d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a new ADXL375 class.  <a href="#a5cdd726a4633482fd40cdbc35c46835d">More...</a><br /></td></tr>
 <tr class="separator:a5cdd726a4633482fd40cdbc35c46835d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c631d2b03e5c74da6e2f393612a8ffb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___a_d_x_l375.html#a5c631d2b03e5c74da6e2f393612a8ffb">Adafruit_ADXL375</a> (uint8_t cs, SPIClass *theSPI, int32_t sensorID=-1)</td></tr>
+<tr class="memdesc:a5c631d2b03e5c74da6e2f393612a8ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a new ADXL375 class in hardware SPI mode.  <a href="#a5c631d2b03e5c74da6e2f393612a8ffb">More...</a><br /></td></tr>
+<tr class="separator:a5c631d2b03e5c74da6e2f393612a8ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca503cb7de310caf0f9c9121dbc56367"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___a_d_x_l375.html#aca503cb7de310caf0f9c9121dbc56367">Adafruit_ADXL375</a> (uint8_t clock, uint8_t miso, uint8_t mosi, uint8_t cs, int32_t sensorID=-1)</td></tr>
-<tr class="memdesc:aca503cb7de310caf0f9c9121dbc56367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a new ADXL375 class in SPI mode.  <a href="#aca503cb7de310caf0f9c9121dbc56367">More...</a><br /></td></tr>
+<tr class="memdesc:aca503cb7de310caf0f9c9121dbc56367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a new ADXL375 class in software SPI mode.  <a href="#aca503cb7de310caf0f9c9121dbc56367">More...</a><br /></td></tr>
 <tr class="separator:aca503cb7de310caf0f9c9121dbc56367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2059e544a6aca6c5baa120947e5d4729"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_adafruit___a_d_x_l375.html#a2059e544a6aca6c5baa120947e5d4729">begin</a> (uint8_t i2caddr=<a class="el" href="_adafruit___a_d_x_l375_8h.html#ae7ed911846cc290800a2c2455360ecda">ADXL375_ADDRESS</a>)</td></tr>
 <tr class="memdesc:a2059e544a6aca6c5baa120947e5d4729"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setups the HW (reads coefficients values, etc.)  <a href="#a2059e544a6aca6c5baa120947e5d4729">More...</a><br /></td></tr>
@@ -107,7 +110,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Driver for the Adafruit ADXL375 breakout. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4cea2241a9e8ae4082ed66d86ed7df9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cea2241a9e8ae4082ed66d86ed7df9b">&#9670;&nbsp;</a></span>Adafruit_ADXL375() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cea2241a9e8ae4082ed66d86ed7df9b">&#9670;&nbsp;</a></span>Adafruit_ADXL375() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +136,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5cdd726a4633482fd40cdbc35c46835d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cdd726a4633482fd40cdbc35c46835d">&#9670;&nbsp;</a></span>Adafruit_ADXL375() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdd726a4633482fd40cdbc35c46835d">&#9670;&nbsp;</a></span>Adafruit_ADXL375() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,8 +172,52 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5c631d2b03e5c74da6e2f393612a8ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c631d2b03e5c74da6e2f393612a8ffb">&#9670;&nbsp;</a></span>Adafruit_ADXL375() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Adafruit_ADXL375::Adafruit_ADXL375 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>cs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SPIClass *&#160;</td>
+          <td class="paramname"><em>theSPI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>sensorID</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instantiates a new ADXL375 class in hardware SPI mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cs</td><td>The CS/SSEL pin </td></tr>
+    <tr><td class="paramname">theSPI</td><td>SPIClass instance to use for SPI communication. </td></tr>
+    <tr><td class="paramname">sensorID</td><td>An optional ID # so you can track this sensor, it will tag sensorEvents you create. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aca503cb7de310caf0f9c9121dbc56367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca503cb7de310caf0f9c9121dbc56367">&#9670;&nbsp;</a></span>Adafruit_ADXL375() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aca503cb7de310caf0f9c9121dbc56367">&#9670;&nbsp;</a></span>Adafruit_ADXL375() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +260,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Instantiates a new ADXL375 class in SPI mode. </p>
+<p>Instantiates a new ADXL375 class in software SPI mode. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">clock</td><td>The SCK pin </td></tr>
