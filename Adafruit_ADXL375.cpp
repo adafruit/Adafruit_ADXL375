@@ -46,7 +46,20 @@ Adafruit_ADXL375::Adafruit_ADXL375(int32_t sensorID, TwoWire *wireBus)
 
 /**************************************************************************/
 /*!
-    @brief  Instantiates a new ADXL375 class in SPI mode
+    @brief  Instantiates a new ADXL375 class in hardware SPI mode
+    @param cs The CS/SSEL pin
+    @param theSPI SPIClass instance to use for SPI communication.
+    @param sensorID An optional ID # so you can track this sensor, it will tag
+           sensorEvents you create.
+*/
+/**************************************************************************/
+Adafruit_ADXL375::Adafruit_ADXL375(uint8_t cs, SPIClass *theSPI,
+                                   int32_t sensorID)
+    : Adafruit_ADXL343(cs, theSPI, sensorID) {}
+
+/**************************************************************************/
+/*!
+    @brief  Instantiates a new ADXL375 class in software SPI mode
 
     @param clock The SCK pin
     @param miso The MISO pin
@@ -85,10 +98,20 @@ bool Adafruit_ADXL375::begin(uint8_t i2caddr) {
     if (spi_dev) {
       delete spi_dev; // remove old interface
     }
-    spi_dev = new Adafruit_SPIDevice(_cs, _clk, _di, _do,
-                                     1000000,               // frequency
-                                     SPI_BITORDER_MSBFIRST, // bit order
-                                     SPI_MODE3);            // data mode
+    if (_spi) {
+      // hardware spi
+      spi_dev = new Adafruit_SPIDevice(_cs,
+                                       1000000,               // frequency
+                                       SPI_BITORDER_MSBFIRST, // bit order
+                                       SPI_MODE3,             // data mode
+                                       _spi);                 // hardware SPI
+    } else {
+      // software spi
+      spi_dev = new Adafruit_SPIDevice(_cs, _clk, _di, _do,
+                                       1000000,               // frequency
+                                       SPI_BITORDER_MSBFIRST, // bit order
+                                       SPI_MODE3);            // data mode
+    }
     if (!spi_dev->begin()) {
       return false;
     }

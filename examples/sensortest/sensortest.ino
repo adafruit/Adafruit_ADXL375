@@ -11,8 +11,11 @@
 /* Uncomment following line for default Wire bus      */
 Adafruit_ADXL375 accel = Adafruit_ADXL375(12345);
 
-/* Uncomment for SPI */
+/* Uncomment for software SPI */
 //Adafruit_ADXL375 accel = Adafruit_ADXL375(ADXL375_SCK, ADXL375_MISO, ADXL375_MOSI, ADXL375_CS, 12345);
+
+/* Uncomment for hardware SPI */
+//Adafruit_ADXL375 accel = Adafruit_ADXL375(ADXL375_CS, &SPI, 12345);
 
 void displayDataRate(void)
 {

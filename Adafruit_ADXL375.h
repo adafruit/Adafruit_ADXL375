@@ -45,6 +45,7 @@ class Adafruit_ADXL375 : public Adafruit_ADXL343 {
 public:
   Adafruit_ADXL375(int32_t sensorID);
   Adafruit_ADXL375(int32_t sensorID, TwoWire *wireBus);
+  Adafruit_ADXL375(uint8_t cs, SPIClass *theSPI, int32_t sensorID = -1);
   Adafruit_ADXL375(uint8_t clock, uint8_t miso, uint8_t mosi, uint8_t cs,
                    int32_t sensorID = -1);
 
