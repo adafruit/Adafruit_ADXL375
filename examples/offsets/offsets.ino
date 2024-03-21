@@ -16,6 +16,9 @@
 /* Uncomment following line for default Wire bus      */
 Adafruit_ADXL375 accel = Adafruit_ADXL375(12345);
 
+/* Uncomment following line for use with STEMMA connector      */
+//Adafruit_ADXL375 accel = Adafruit_ADXL375(12345, &Wire1);
+
 /* Uncomment for SPI */
 //Adafruit_ADXL375 accel = Adafruit_ADXL375(ADXL375_SCK, ADXL375_MISO, ADXL375_MOSI, ADXL375_CS, 12345);
 
